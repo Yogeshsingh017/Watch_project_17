@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Wrist Watch</title>
+    </head>
+    <body>
+        <section id="mySection">
+            <svg id="mySVG" width="300" height="300">
+                <!-- Watch Frame -->
+                <circle cx="150" cy="150" r="80" stroke-width="5" stroke="goldenrod" fill="none"/>
+                <circle cx="150" cy="150" r="76.5" stroke-width="2.5" stroke="khaki" fill="none"/>
+                <!-- Watch Base -->
+                <circle cx="150" cy="150" r="75" fill="black"/>
+                <!-- Watch Date -->
+                <rect x="165" y="145" width="30" height="10" rx="1" ry="1" fill="black" stroke="white"/>
+                <rect x="166" y="146" width="28" height="8" rx="1" ry="1" fill="white"/>
+                <line x1="183" y1="146" x2="183" y2="154" stroke="black"/>
+                <text id="currDay" x="164" y="151" text-anchor="left" dominant-baseline="middle" font-size="9px" font-weight="bold"></text>
+                <text id="currDate" x="184" y="151" text-anchor="left" dominant-baseline="middle" font-size="9px" font-weight="bold"></text>
+
+                <!-- Watch Title -->
+                <text id="currDate" x="150" y="125" text-anchor="middle" dominant-baseline="middle" font-size="8px" font-weight="bold" fill="khaki">Yogi</text>
+
+                <!-- Straps -->
+                <g stroke="rgba(0,0,0,0.75)">
+                    <rect x="110" y="0" width="80" height="65" fill="brown"></rect>
+                    <rect x="110" y="235" width="80" height="65" fill="brown"></rect>
+                </g>
+
+                <!-- Handles -->
+
+                <path d="M190,55 L200,58 L215,100 L190,82 Z" fill="goldenrod"/>
+                <path d="M110,55 L100,58 L85,100 L110,82 Z" fill="goldenrod"/>
+
+                <path d="M190,245 L200,242 L215,200 L190,218 Z" fill="goldenrod"/>
+                <path d="M110,245 L100,242 L85,200 L110,218 Z" fill="goldenrod"/>
+
+                <line x1="120" y1="60" x2="120" y2="0" stroke="rgba(0,0,0,0.4)" stroke-dasharray="5"/>
+                <line x1="180" y1="60" x2="180" y2="0" stroke="rgba(0,0,0,0.4)" stroke-dasharray="5"/>
+                
+                <line x1="120" y1="240" x2="120" y2="300" stroke="rgba(0,0,0,0.4)" stroke-dasharray="5"/>
+                <line x1="180" y1="240" x2="180" y2="300" stroke="rgba(0,0,0,0.4)" stroke-dasharray="5"/>
+
+                <!-- Dial -->
+                <rect x="232" y="140" width="10" height="20" fill="goldenrod" stroke="rgba(0,0,0,0.25)"/>
+                <line x1="232" y1="143" x2="242" y2="143" stroke="rgba(0,0,0,0.25)"/>
+                <line x1="232" y1="146" x2="242" y2="146" stroke="rgba(0,0,0,0.25)"/>
+                <line x1="232" y1="149" x2="242" y2="149" stroke="rgba(0,0,0,0.25)"/>
+                <line x1="232" y1="152" x2="242" y2="152" stroke="rgba(0,0,0,0.25)"/>
+                <line x1="232" y1="155" x2="242" y2="155" stroke="rgba(0,0,0,0.25)"/>
+                <line x1="232" y1="158" x2="242" y2="158" stroke="rgba(0,0,0,0.25)"/>
+                
+                <!-- Watch Hands -->
+                <g stroke="brown" stroke-opacity="0.5">
+                    <path id="hourHand" d="M145,150 L146.5,115 L150,110 L153.5,115 L155,150 L155,155 L150,165 L145,155 Z" fill="khaki"></path>
+                    <path id="minuteHand" d="M146,150 L147.5,102.5 L150,100 L152.5,102.5 L154,150 L154,155 L150,165 L146,155 Z" fill="khaki"></path>
+                    <path id="secondHand" d="M149,150 L149.5,95 L150.5,95 L151,150 L151,165 L149,165 Z" fill="khaki" stroke="none"></path>
+                </g>
+
+                <!-- Times -->
+                <defs>
+                    <rect id="times" x="149" y="80" width="2" height="20" rx="1" ry="1" fill="khaki" transform="rotate(0,150,150)"/>
+                    <g id="timesAlt">
+                        <rect x="147.5" y="80" width="2" height="20" rx="1" ry="1" fill="khaki"/>
+                        <rect x="150.5" y="80" width="2" height="20" rx="1" ry="1" fill="khaki"/>
+                    </g>
+                </defs>
+                <use href="#times" transform="rotate(30,150,150)"/>
+                <use href="#times" transform="rotate(60,150,150)"/>
+                <use href="#times" transform="rotate(120,150,150)"/>
+                <use href="#times" transform="rotate(150,150,150)"/>
+                <use href="#times" transform="rotate(210,150,150)"/>
+                <use href="#times" transform="rotate(240,150,150)"/>
+                <use href="#times" transform="rotate(300,150,150)"/>
+                <use href="#times" transform="rotate(330,150,150)"/>
+                <use href="#timesAlt" transform="rotate(0,150,150)"/>
+                <use href="#timesAlt" transform="rotate(90,150,150)"/>
+                <use href="#timesAlt" transform="rotate(180,150,150)"/>
+                <use href="#timesAlt" transform="rotate(270,150,150)"/>
+            </svg>
+        </section>
+        <div id="footer">
+            <div id="footerContainer">
+                <div id="profilePic">
+                    <a href="https://www.youtube.com/@yogeshsinghvlog1750"><img id="theImg" src="pahadi.JPG"/></a>
+                </div>
+                <div id="sig">
+                    <p><a href="https://www.instagram.com/pahadi_bhula_uk_17/">Yogi</a> &copy; 12/50 (2023). Follow me:&nbsp;</p>
+                </div>
+                <div id="logos">
+                    <a href="https://www.youtube.com/@yogeshsinghvlog1750"><img id="slImg" src="https://img.icons8.com/?size=512&id=19318&format=png"/></a>
+                    <a href="https://codepen.io/JDawson"><img id="cpenImg" src="https://res.cloudinary.com/css-tricks/images/w_600,h_600,c_fill/f_auto,q_auto/v1637703540/Button-White-Large/Button-White-Large-png?_i=AA"/></a>
+                </div>
+            </div>
+        </div>
+        <script src="basic.js"></script>
+    </body>
+</html>
